@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dərs 1 - Giriş və Əsaslar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header .lesson-number {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .content {
+            line-height: 1.8;
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin: 30px 0 15px 0;
+            font-size: 1.5em;
+        }
+
+        .content h3 {
+            color: #764ba2;
+            margin: 25px 0 10px 0;
+            font-size: 1.3em;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content ul, .content ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="lesson-number">Dərs 1</div>
+            <h1>🎯 Giriş və Əsaslar</h1>
+            <p>Proqramlaşdırmanın əsas anlayışları və başlanğıc məfhumları</p>
+        </div>
+
+        <div class="content">
+            <h2>📚 Dərsin Məqsədi</h2>
+            <p>Bu dərsdə proqramlaşdırmanın əsas anlayışları, kompüterin necə işlədiyi və ilk proqramın necə yazılacağı haqqında öyrənəcəksiniz.</p>
+
+            <div class="highlight">
+                <strong>🎯 Dərsin sonunda siz:</strong>
+                <ul>
+                    <li>Proqramlaşdırmanın nə olduğunu başa düşəcəksiniz</li>
+                    <li>Proqramlaşdırma dillərinin növlərini öyrənəcəksiniz</li>
+                    <li>İlk sadə proqramınızı yazacaqsınız</li>
+                </ul>
+            </div>
+
+            <h2>🤔 Proqramlaşdırma Nədir?</h2>
+            <p>Proqramlaşdırma - kompüterə müəyyən tapşırıqları yerinə yetirmək üçün təlimatlar verməkdir. Bu təlimatlar xüsusi dildə (proqramlaşdırma dili) yazılır.</p>
+
+            <h3>Proqramlaşdırmanın Əsas Məfhumları:</h3>
+            <ul>
+                <li><strong>Alqoritm</strong> - problemin həlli üçün addım-addım təlimatlar</li>
+                <li><strong>Proqram</strong> - alqoritmin proqramlaşdırma dilində yazılmış forması</li>
+                <li><strong>Kod</strong> - proqramın mətn formatında yazılışı</li>
+                <li><strong>Debugging</strong> - proqramdakı səhvlərin tapılması və düzəldilməsi</li>
+            </ul>
+
+            <h2>💻 Proqramlaşdırma Dilləri</h2>
+            <p>Müxtəlif məqsədlər üçün müxtəlif proqramlaşdırma dilləri istifadə olunur:</p>
+
+            <h3>Populyar Proqramlaşdırma Dilləri:</h3>
+            <ol>
+                <li><strong>Python</strong> - başlanğıc üçün ideal, sadə sintaksis</li>
+                <li><strong>JavaScript</strong> - web saytlar üçün</li>
+                <li><strong>Java</strong> - böyük layihələr üçün</li>
+                <li><strong>C++</strong> - sistemlər proqramlaşdırması</li>
+                <li><strong>C#</strong> - Windows proqramları</li>
+            </ol>
+
+            <h2>🚀 İlk Proqram: "Salam Dünya"</h2>
+            <p>Proqramlaşdırmaya başlamaq üçün ənənəvi olaraq "Salam Dünya" proqramı yazılır:</p>
+
+            <div class="code-block">
+# Python dilində
+print("Salam Dünya!")
+
+# JavaScript dilində
+console.log("Salam Dünya!");
+
+# Java dilində
+public class SalamDunya {
+    public static void main(String[] args) {
+        System.out.println("Salam Dünya!");
+    }
+}
+            </div>
+
+            <h2>🛠️ Praktik Tapşırıq</h2>
+            <div class="highlight">
+                <strong>Tapşırıq:</strong> Öz adınızı ekranda göstərən sadə proq
