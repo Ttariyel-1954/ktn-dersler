@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KTN Dərslər - Ana Səhifə</title>
+    <title>Klassik Test Nəzəriyyəsi Dərslər</title>
     <style>
         * {
             margin: 0;
@@ -15,182 +15,51 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            color: #333;
+            padding: 20px;
         }
 
-        /* Header */
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px 0;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            font-size: 2em;
-            font-weight: bold;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .nav-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            font-size: 0.9em;
-        }
-
-        .nav-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Main Container */
         .container {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .hero {
-            text-align: center;
-            margin-bottom: 50px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
+            margin: 0 auto;
+            background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 15px;
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            margin-bottom: 15px;
         }
 
-        .hero p {
-            font-size: 1.2em;
+        .header .subtitle {
+            font-size: 1.3em;
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
-        /* Progress Bar */
-        .progress-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        .header .description {
+            font-size: 1em;
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
-        .progress-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .progress-bar {
-            background: #e9ecef;
-            height: 20px;
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .progress-fill {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 100%;
-            border-radius: 10px;
-            transition: width 0.5s ease;
-            position: relative;
-        }
-
-        .progress-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        /* Filter Buttons */
-        .filter-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            border-radius: 15px;
+        .search-section {
             margin-bottom: 30px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .filter-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .filter-btn {
-            background: #f8f9fa;
-            border: 2px solid #dee2e6;
-            color: #495057;
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .filter-btn.active {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-color: transparent;
-        }
-
-        .filter-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Search */
-        .search-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .search-box {
@@ -202,8 +71,8 @@
         .search-input {
             width: 100%;
             padding: 15px 50px 15px 20px;
-            border: 2px solid #dee2e6;
-            border-radius: 25px;
+            border: 2px solid #e9ecef;
+            border-radius: 30px;
             font-size: 1em;
             outline: none;
             transition: all 0.3s ease;
@@ -211,7 +80,7 @@
 
         .search-input:focus {
             border-color: #667eea;
-            box-shadow: 0 0 10px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 0 15px rgba(102, 126, 234, 0.2);
         }
 
         .search-icon {
@@ -220,91 +89,123 @@
             top: 50%;
             transform: translateY(-50%);
             color: #667eea;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
 
-        /* Lessons Grid */
-        .lessons-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 30px;
             border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-width: 140px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
         }
 
         .lessons-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 25px;
+            margin-bottom: 40px;
         }
 
         .lesson-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 15px;
-            padding: 25px;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 18px;
+            padding: 30px;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
             position: relative;
             overflow: hidden;
         }
 
+        .lesson-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .lesson-card:hover::before {
+            left: 100%;
+        }
+
         .lesson-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
             border-color: #667eea;
-        }
-
-        .lesson-card.completed {
-            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-            border-color: #28a745;
-        }
-
-        .lesson-card.current {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border-color: #ffc107;
-        }
-
-        .lesson-card.locked {
-            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
-            opacity: 0.7;
         }
 
         .lesson-header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .lesson-number {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.4em;
             font-weight: bold;
-            font-size: 1.1em;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
         }
 
-        .lesson-status {
-            font-size: 1.5em;
+        .lesson-info {
+            flex: 1;
         }
 
         .lesson-title {
             font-size: 1.3em;
             font-weight: 600;
             color: #333;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+        }
+
+        .lesson-subtitle {
+            color: #666;
+            font-size: 0.9em;
         }
 
         .lesson-description {
-            color: #666;
-            font-size: 0.95em;
-            line-height: 1.5;
+            color: #555;
             margin-bottom: 20px;
+            font-size: 0.95em;
+            line-height: 1.6;
         }
 
         .lesson-meta {
@@ -316,107 +217,76 @@
             color: #666;
         }
 
-        .lesson-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .lesson-btn {
-            padding: 10px 20px;
-            border-radius: 20px;
-            text-decoration: none;
+        .lesson-category {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8em;
             font-weight: 500;
-            transition: all 0.3s ease;
-            flex: 1;
-            text-align: center;
-            font-size: 0.9em;
         }
 
-        .btn-primary {
+        .lesson-link {
+            display: block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
         }
 
-        .btn-secondary {
-            background: #6c757d;
-            color: white;
-        }
-
-        .btn-success {
-            background: #28a745;
-            color: white;
-        }
-
-        .lesson-btn:hover {
+        .lesson-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
         }
 
-        .lesson-btn.disabled {
-            background: #ccc;
+        .lesson-link.loading {
+            background: #6c757d;
+            cursor: wait;
+        }
+
+        .lesson-link.not-found {
+            background: #dc3545;
             cursor: not-allowed;
             pointer-events: none;
         }
 
-        /* Stats */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+        .lesson-link.found {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
         }
 
-        .stat-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 25px;
+        .info-section {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f4ff 100%);
             border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            color: #666;
-            font-weight: 500;
-        }
-
-        /* Footer */
-        .footer {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
+            padding: 30px;
             margin-top: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #667eea;
         }
 
-        .footer h3 {
-            margin-bottom: 20px;
+        .info-section h3 {
             color: #333;
+            margin-bottom: 20px;
+            font-size: 1.4em;
         }
 
-        .footer-links {
+        .info-section p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .links-section {
             display: flex;
-            gap: 20px;
-            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
             flex-wrap: wrap;
         }
 
-        .footer-link {
+        .info-link {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 12px 25px;
@@ -424,208 +294,336 @@
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
+            font-size: 0.9em;
         }
 
-        .footer-link:hover {
+        .info-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Responsive */
+        .status-message {
+            text-align: center;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-weight: 500;
+        }
+
+        .status-loading {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-partial {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
+            .container {
+                padding: 20px;
             }
-
-            .hero h1 {
-                font-size: 2em;
+            
+            .header h1 {
+                font-size: 2.2em;
             }
-
+            
             .lessons-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .stats {
+                gap: 15px;
+            }
 
-            .lesson-actions {
+            .lesson-header {
                 flex-direction: column;
+                text-align: center;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .nav-menu {
-                justify-content: center;
+            .lesson-number {
+                margin-right: 0;
+                margin-bottom: 15px;
             }
         }
 
-        .hidden {
-            display: none;
+        /* Loading Animation */
+        .loading-dots::after {
+            content: '';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">🎓 KTN Dərslər</div>
-            <nav class="nav-menu">
-                <a href="#ana-sehife" class="nav-item">🏠 Ana Səhifə</a>
-                <a href="#dersler" class="nav-item">📚 Dərslər</a>
-                <a href="#tedris-plani" class="nav-item">📋 Tədris Planı</a>
-                <a href="https://github.com/ttariyel-1954/ktn-dersler" class="nav-item" target="_blank">💻 GitHub</a>
-            </nav>
-        </div>
-    </div>
-
     <div class="container">
-        <!-- Hero Section -->
-        <div class="hero" id="ana-sehife">
-            <h1>🎯 KTN Dərslər Platforması</h1>
-            <p>Kompüter Texnologiyaları və Proqramlaşdırma üzrə təkmil tədris materialları</p>
-        </div>
-
-        <!-- Stats -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number" id="totalLessons">20</div>
-                <div class="stat-label">Ümumi Dərs</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" id="completedLessons">0</div>
-                <div class="stat-label">Tamamlanmış</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" id="currentProgress">0%</div>
-                <div class="stat-label">Tərəqqi</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Pulsuz</div>
+        <div class="header">
+            <h1>📊 Klassik Test Nəzəriyyəsi</h1>
+            <div class="subtitle">Təhsildə Ölçmə və Qiymətləndirmə Dərslər Toplusu</div>
+            <div class="description">
+                Bu kurs klassik test nəzəriyyəsinin əsas prinsiplərini, testlərin hazırlanması, 
+                tətbiqi və qiymətləndirilməsi metodlarını əhatə edir. Hər dərs nəzəri biliklər 
+                və praktik tətbiqlərlə zənginləşdirilmişdir.
             </div>
         </div>
 
-        <!-- Progress -->
-        <div class="progress-section">
-            <div class="progress-header">
-                <h3>📈 Öyrənmə Tərəqqiniz</h3>
-                <span id="progressText">0/20 dərs tamamlandı</span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill" style="width: 0%">
-                    <div class="progress-text" id="progressPercent">0%</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Filter -->
-        <div class="filter-section">
-            <h3>🎛️ Dərslər Filteri</h3>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Hamısı</button>
-                <button class="filter-btn" data-filter="available">Mövcud</button>
-                <button class="filter-btn" data-filter="completed">Tamamlanmış</button>
-                <button class="filter-btn" data-filter="current">Cari</button>
-                <button class="filter-btn" data-filter="locked">Gözləyir</button>
-            </div>
-        </div>
-
-        <!-- Search -->
         <div class="search-section">
             <div class="search-box">
-                <input type="text" class="search-input" placeholder="Dərs və ya mövzu axtar..." id="searchInput">
+                <input type="text" class="search-input" placeholder="Dərslər və mövzular arasında axtarış..." id="searchInput">
                 <span class="search-icon">🔍</span>
             </div>
         </div>
 
-        <!-- Lessons -->
-        <div class="lessons-section" id="dersler">
-            <h2 style="text-align: center; margin-bottom: 30px; color: #333;">📚 Dərslər Siyahısı</h2>
-            <div class="lessons-grid" id="lessonsGrid">
-                <!-- Dərslər buraya JavaScript ilə əlavə olunacaq -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">20</div>
+                <div class="stat-label">Ümumi Dərs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="availableLessons">-</div>
+                <div class="stat-label">Mövcud Dərs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Pulsuz</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">AZ</div>
+                <div class="stat-label">Ana Dildə</div>
             </div>
         </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <h3>🔗 Faydalı Resurslar</h3>
-            <div class="footer-links">
-                <a href="https://github.com/ttariyel-1954/ktn-dersler" class="footer-link" target="_blank">
+        <div id="statusMessage" class="status-message status-loading">
+            <p>🔄 <strong>Dərslər yoxlanılır</strong><span class="loading-dots"></span></p>
+            <p>Klassik Test Nəzəriyyəsi dərsləri tapılır və hazırlanır...</p>
+        </div>
+
+        <div class="lessons-grid" id="lessonsGrid">
+            <!-- Dərslər JavaScript ilə əlavə olunacaq -->
+        </div>
+
+        <div class="info-section">
+            <h3>📖 Klassik Test Nəzəriyyəsi Haqqında</h3>
+            <p><strong>Klassik Test Nəzəriyyəsi (Classical Test Theory)</strong> psixometriya və təhsil ölçmələrinin əsas nəzəri çərçivəsidir. Bu nəzəriyyə test nəticələrinin etibarlılığı və keçərliliyi ilə məşğul olur.</p>
+            
+            <p>Bu kursda aşağıdakı əsas mövzular əhatə olunur:</p>
+            <ul style="margin: 15px 0 15px 30px; color: #555;">
+                <li>Test nəzəriyyəsinin əsas postulları</li>
+                <li>Etibarlılıq və keçərlilik anlayışları</li>
+                <li>Test maddələrinin analizi</li>
+                <li>Standart səhv və güven intervalları</li>
+                <li>Test konstruksiyası və standardlaşdırma</li>
+            </ul>
+
+            <p>Dərslər Azərbaycan Respublikasının təhsil standartlarına uyğun olaraq hazırlanmış və yerli tədris metodikası nəzərə alınmışdır.</p>
+            
+            <div class="links-section">
+                <a href="https://github.com/ttariyel-1954/ktn-dersler" class="info-link" target="_blank">
                     📁 GitHub Repository
                 </a>
-                <a href="https://github.com/ttariyel-1954/ktn-dersler/issues" class="footer-link" target="_blank">
+                <a href="https://github.com/ttariyel-1954/ktn-dersler/issues" class="info-link" target="_blank">
                     🐛 Problem Bildir
                 </a>
-                <a href="mailto:example@email.com" class="footer-link">
+                <a href="mailto:ttariyel1954@gmail.com" class="info-link">
                     📧 Əlaqə
                 </a>
             </div>
-            <p style="margin-top: 20px; color: #666;">
-                © 2025 KTN Dərslər. Bütün hüquqlar qorunur.
-            </p>
         </div>
     </div>
 
     <script>
-        // Dərslər məlumatları
+        // Klassik Test Nəzəriyyəsi dərslər siyahısı
         const lessons = [
-            { number: 1, title: "Giriş və Əsaslar", description: "Proqramlaşdırmanın əsas anlayışları", duration: "45 dəq", difficulty: "Başlanğıc", category: "əsaslar" },
-            { number: 2, title: "Dəyişənlər və Sabitler", description: "Dəyişənlərin elanı və istifadəsi", duration: "50 dəq", difficulty: "Başlanğıc", category: "əsaslar" },
-            { number: 3, title: "Məlumat Tipləri", description: "Müxtəlif məlumat tipləri və onların istifadəsi", duration: "60 dəq", difficulty: "Başlanğıc", category: "əsaslar" },
-            { number: 4, title: "Operatorlar", description: "Arifmetik, məntiqi və müqayisə operatorları", duration: "55 dəq", difficulty: "Başlanğıc", category: "əsaslar" },
-            { number: 5, title: "Şərt Operatorları", description: "If-else, switch-case strukturları", duration: "65 dəq", difficulty: "Orta", category: "idarəetmə" },
-            { number: 6, title: "Dövrlər", description: "For, while və do-while dövrlər", duration: "70 dəq", difficulty: "Orta", category: "idarəetmə" },
-            { number: 7, title: "Massivlər", description: "Massivlərin yaradılması və işlənməsi", duration: "75 dəq", difficulty: "Orta", category: "məlumat-strukturları" },
-            { number: 8, title: "Funksiyalar", description: "Funksiyaların yaradılması və çağırılması", duration: "80 dəq", difficulty: "Orta", category: "funksiyalar" },
-            { number: 9, title: "Obyektlər", description: "Obyekt yönümlü proqramlaşdırma əsasları", duration: "85 dəq", difficulty: "Çətin", category: "oop" },
-            { number: 10, title: "Siniflər", description: "Siniflərin yaradılması və istifadəsi", duration: "90 dəq", difficulty: "Çətin", category: "oop" },
-            { number: 11, title: "Miras Alma", description: "Inheritance və polimorfizm", duration: "85 dəq", difficulty: "Çətin", category: "oop" },
-            { number: 12, title: "Fayl İşləmə", description: "Faylların oxunması və yazılması", duration: "70 dəq", difficulty: "Orta", category: "fayl-sistemi" },
-            { number: 13, title: "Verilənlər Bazası", description: "SQL və verilənlər bazası əməliyyatları", duration: "95 dəq", difficulty: "Çətin", category: "verilənlər-bazası" },
-            { number: 14, title: "Web Proqramlaşdırma", description: "HTML, CSS və JavaScript əsasları", duration: "100 dəq", difficulty: "Orta", category: "web" },
-            { number: 15, title: "API İstifadəsi", description: "REST API ilə işləmə", duration: "80 dəq", difficulty: "Çətin", category: "web" },
-            { number: 16, title: "Layihə İdarəetməsi", description: "Git və GitHub istifadəsi", duration: "75 dəq", difficulty: "Orta", category: "alətlər" },
-            { number: 17, title: "Test Yazma", description: "Unit və integration testləri", duration: "85 dəq", difficulty: "Çətin", category: "test" },
-            { number: 18, title: "Performans Optimizasiyası", description: "Kod optimizasiyası və debugging", duration: "90 dəq", difficulty: "Çətin", category: "optimizasiya" },
-            { number: 19, title: "Təhlükəsizlik", description: "Proqram təhlükəsizliyi və best practices", duration: "80 dəq", difficulty: "Çətin", category: "təhlükəsizlik" },
-            { number: 20, title: "Final Layihə", description: "Praktik layihə və qiymətləndirmə", duration: "120 dəq", difficulty: "Çətin", category: "layihə" }
+            { 
+                number: 1, 
+                title: "Test Nəzəriyyəsinə Giriş", 
+                description: "Klassik test nəzəriyyəsinin əsas anlayışları və tarixçəsi. Ölçmə, qiymətləndirmə və test anlayışlarının fərqləri.",
+                category: "Giriş",
+                duration: "45 dəqiqə"
+            },
+            { 
+                number: 2, 
+                title: "Ölçmənin Əsasları", 
+                description: "Ölçmə prosesinin təməl prinsipləri, ölçmə səviyyələri və ölçmə xətalarının növləri.",
+                category: "Əsaslar",
+                duration: "50 dəqiqə"
+            },
+            { 
+                number: 3, 
+                title: "Test Konstruksiyası", 
+                description: "Effektiv testlərin hazırlanması prosesi, test məqsədlərinin müəyyənləşdirilməsi və planlaşdırma.",
+                category: "Konstruksiya",
+                duration: "55 dəqiqə"
+            },
+            { 
+                number: 4, 
+                title: "Test Maddələrinin Hazırlanması", 
+                description: "Müختlif növ test maddələrinin yaradılması qaydaları və texnikaları.",
+                category: "Konstruksiya",
+                duration: "60 dəqiqə"
+            },
+            { 
+                number: 5, 
+                title: "Etibarlılıq Anlayışı", 
+                description: "Test etibarlılığının mahiyyəti, növləri və hesablama metodları.",
+                category: "Etibarlılıq",
+                duration: "50 dəqiqə"
+            },
+            { 
+                number: 6, 
+                title: "Daxili Uyğunluq Etibarlılığı", 
+                description: "Cronbach Alpha, Split-half və digər daxili uyğunluq göstəricilərinin hesablanması.",
+                category: "Etibarlılıq",
+                duration: "55 dəqiqə"
+            },
+            { 
+                number: 7, 
+                title: "Test-Retest Etibarlılığı", 
+                description: "Zamana görə sabitlik etibarlılığının qiymətləndirilməsi və tətbiqi.",
+                category: "Etibarlılıq",
+                duration: "45 dəqiqə"
+            },
+            { 
+                number: 8, 
+                title: "Keçərlilik Anlayışı", 
+                description: "Test keçərliliyinin mahiyyəti və əsas növləri (məzmun, meyar, konstrukt keçərliliyi).",
+                category: "Keçərlilik",
+                duration: "50 dəqiqə"
+            },
+            { 
+                number: 9, 
+                title: "Məzmun Keçərliliği", 
+                description: "Testin ölçülən sahəni nə dərəcədə əks etdirməsinin qiymətləndirilməsi.",
+                category: "Keçərlilik",
+                duration: "45 dəqiqə"
+            },
+            { 
+                number: 10, 
+                title: "Meyar Keçərliliği", 
+                description: "Eyni zamanlı və proqnozlaşdırıcı keçərliliyin hesablanması və şərhi.",
+                category: "Keçərlilik",
+                duration: "55 dəqiqə"
+            },
+            { 
+                number: 11, 
+                title: "Konstrukt Keçərliliği", 
+                description: "Test konstruktunun nəzəri əsaslarının empirik olaraq təsdiq edilməsi.",
+                category: "Keçərlilik",
+                duration: "60 dəqiqə"
+            },
+            { 
+                number: 12, 
+                title: "Madde Analizi", 
+                description: "Test maddələrinin çətinlik indeksi və ayırdetmə gücünün hesablanması.",
+                category: "Analiz",
+                duration: "65 dəqiqə"
+            },
+            { 
+                number: 13, 
+                title: "Distraktör Analizi", 
+                description: "Çoxseçimli testlərdə yanlış variantların effektivliyinin qiymətləndirilməsi.",
+                category: "Analiz",
+                duration: "50 dəqiqə"
+            },
+            { 
+                number: 14, 
+                title: "Standart Səhv və Güven İntervalları", 
+                description: "Ölçmə səhvlərinin hesablanması və nəticələrin etibarlılıq aralıqları.",
+                category: "Statistika",
+                duration: "55 dəqiqə"
+            },
+            { 
+                number: 15, 
+                title: "Norm Qrupları və Standartlaşdırma", 
+                description: "Test normalarının yaradılması və standardlaşdırma prosesi.",
+                category: "Normlaşdırma",
+                duration: "60 dəqiqə"
+            },
+            { 
+                number: 16, 
+                title: "Z-balları və T-balları", 
+                description: "Standart balların hesablanması və şərh edilməsi metodları.",
+                category: "Normlaşdırma",
+                duration: "50 dəqiqə"
+            },
+            { 
+                number: 17, 
+                title: "Persentil Ranklar", 
+                description: "Persentil sisteminin tətbiqi və nəticələrin müqayisəli təhlili.",
+                category: "Normlaşdırma",
+                duration: "45 dəqiqə"
+            },
+            { 
+                number: 18, 
+                title: "Test Ədalətsizliyi və Qərəzlilik", 
+                description: "Testlərdə mədəni və sosial qərəzliliyin aradan qaldırılması metodları.",
+                category: "Ədalətlilik",
+                duration: "55 dəqiqə"
+            },
+            { 
+                number: 19, 
+                title: "Kompüter Əsaslı Test Tətbiqi", 
+                description: "Müasir texnologiyalardan istifadə edərək test aparılması və qiymətləndirilməsi.",
+                category: "Texnologiya",
+                duration: "65 dəqiqə"
+            },
+            { 
+                number: 20, 
+                title: "Test Nəticələrinin Hesabatı", 
+                description: "Test nəticələrinin təqdim edilməsi, şərh edilməsi və praktik tövsiyələrin verilməsi.",
+                category: "Hesabat",
+                duration: "70 dəqiqə"
+            }
         ];
 
-        // Tərəqqi məlumatları
-        let progress = JSON.parse(localStorage.getItem('ktn-progress') || '{"completed": [], "current": 1}');
-
-        // Dərsin statusunu təyin etmək
-        function getLessonStatus(lessonNumber) {
-            if (progress.completed.includes(lessonNumber)) {
-                return 'completed';
-            } else if (lessonNumber === progress.current) {
-                return 'current';
-            } else if (lessonNumber < progress.current) {
-                return 'available';
-            } else {
-                return 'locked';
-            }
-        }
-
-        // Status ikonu
-        function getStatusIcon(status) {
-            const icons = {
-                completed: '✅',
-                current: '📖',
-                available: '🔓',
-                locked: '🔒'
-            };
-            return icons[status] || '❓';
-        }
-
-        // Çətinlik rəngi
-        function getDifficultyColor(difficulty) {
+        // Kateqoriya rənglərini təyin etmək
+        function getCategoryColor(category) {
             const colors = {
-                'Başlanğıc': '#28a745',
-                'Orta': '#ffc107',
-                'Çətin': '#dc3545'
+                'Giriş': '#28a745',
+                'Əsaslar': '#17a2b8',
+                'Konstruksiya': '#ffc107',
+                'Etibarlılıq': '#6f42c1',
+                'Keçərlilik': '#e83e8c',
+                'Analiz': '#fd7e14',
+                'Statistika': '#6c757d',
+                'Normlaşdırma': '#20c997',
+                'Ədalətlilik': '#dc3545',
+                'Texnologiya': '#007bff',
+                'Hesabat': '#6610f2'
             };
-            return colors[difficulty] || '#6c757d';
+            return colors[category] || '#6c757d';
+        }
+
+        // Fayl mövcudluğunu yoxlamaq
+        async function checkLessonExists(lessonNumber) {
+            try {
+                const fileName = `Ders-${lessonNumber}.html`;
+                const response = await fetch(fileName, { method: 'HEAD' });
+                return { exists: response.ok, fileName: fileName };
+            } catch (error) {
+                return { exists: false, fileName: null };
+            }
         }
 
         // Dərslər siyahısını yaratmaq
@@ -633,117 +631,123 @@
             const lessonsGrid = document.getElementById('lessonsGrid');
             lessonsGrid.innerHTML = '';
             
+            let availableCount = 0;
+            
+            // Hər dərs üçün kart yaratmaq
             for (const lesson of lessonsToShow) {
-                const status = getLessonStatus(lesson.number);
-                const exists = await checkLessonExists(lesson.number);
-                
                 const lessonCard = document.createElement('div');
-                lessonCard.className = `lesson-card ${status}`;
+                lessonCard.className = 'lesson-card';
                 
                 lessonCard.innerHTML = `
                     <div class="lesson-header">
                         <div class="lesson-number">${lesson.number}</div>
-                        <div class="lesson-status">${getStatusIcon(status)}</div>
+                        <div class="lesson-info">
+                            <div class="lesson-title">${lesson.title}</div>
+                            <div class="lesson-subtitle">Dərs ${lesson.number} • ${lesson.duration}</div>
+                        </div>
                     </div>
-                    <div class="lesson-title">${lesson.title}</div>
                     <div class="lesson-description">${lesson.description}</div>
                     <div class="lesson-meta">
-                        <span>⏱️ ${lesson.duration}</span>
-                        <span style="color: ${getDifficultyColor(lesson.difficulty)}">🎯 ${lesson.difficulty}</span>
+                        <div class="lesson-category" style="background-color: ${getCategoryColor(lesson.category)}20; color: ${getCategoryColor(lesson.category)};">
+                            ${lesson.category}
+                        </div>
+                        <div>⏱️ ${lesson.duration}</div>
                     </div>
-                    <div class="lesson-actions">
-                        ${exists ? `
-                            <a href="Ders-${lesson.number}.html" 
-                               class="lesson-btn ${status === 'completed' ? 'btn-success' : 'btn-primary'}" 
-                               target="_blank"
-                               onclick="trackLessonView(${lesson.number})">
-                                ${status === 'completed' ? '🔄 Yenidən bax' : '📖 Dərsə bax'}
-                            </a>
-                        ` : `
-                            <button class="lesson-btn disabled">
-                                ⏳ Tezliklə
-                            </button>
-                        `}
-                        ${status === 'completed' ? `
-                            <button class="lesson-btn btn-secondary" onclick="markAsIncomplete(${lesson.number})">
-                                ↩️ Yenidən
-                            </button>
-                        ` : status === 'current' && exists ? `
-                            <button class="lesson-btn btn-success" onclick="markAsCompleted(${lesson.number})">
-                                ✅ Tamamlandı
-                            </button>
-                        ` : ''}
-                    </div>
+                    <a href="#" class="lesson-link loading" id="link-${lesson.number}">
+                        🔄 Yoxlanılır...
+                    </a>
                 `;
                 
                 lessonsGrid.appendChild(lessonCard);
+                
+                // Asinxron olaraq fayl mövcudluğunu yoxlamaq
+                checkLessonExists(lesson.number).then(result => {
+                    const link = document.getElementById(`link-${lesson.number}`);
+                    if (result.exists) {
+                        link.href = result.fileName;
+                        link.target = '_blank';
+                        link.className = 'lesson-link found';
+                        link.innerHTML = '📖 Dərsə Bax';
+                        availableCount++;
+                    } else {
+                        link.className = 'lesson-link not-found';
+                        link.innerHTML = '❌ Mövcud Deyil';
+                    }
+                    
+                    // Statistikaları yeniləmək
+                    document.getElementById('availableLessons').textContent = availableCount;
+                    updateStatusMessage(availableCount);
+                });
             }
         }
 
-        // Fayl mövcudluğunu yoxlamaq
-        async function checkLessonExists(lessonNumber) {
-            try {
-                const response = await fetch(`Ders-${lessonNumber}.html`, { method: 'HEAD' });
-                return response.ok;
-            } catch (error) {
-                return false;
-            }
-        }
-
-        // Dərs görünümünü izləmək
-        function trackLessonView(lessonNumber) {
-            // Bu funksiyanı gələcəkdə analytics üçün istifadə edə bilərsiniz
-            console.log(`Dərs ${lessonNumber} açıldı`);
-        }
-
-        // Dərsi tamamlanmış kimi qeyd etmək
-        function markAsCompleted(lessonNumber) {
-            if (!progress.completed.includes(lessonNumber)) {
-                progress.completed.push(lessonNumber);
-                progress.current = Math.min(lessonNumber + 1, 21);
-                saveProgress();
-                updateUI();
-                showNotification(`🎉 Dərs ${lessonNumber} uğurla tamamlandı!`, 'success');
-            }
-        }
-
-        // Dərsi yenidən etmək
-        function markAsIncomplete(lessonNumber) {
-            progress.completed = progress.completed.filter(n => n !== lessonNumber);
-            progress.current = lessonNumber;
-            saveProgress();
-            updateUI();
-            showNotification(`🔄 Dərs ${lessonNumber} yenidən etmək üçün hazırlandı.`, 'info');
-        }
-
-        // Tərəqqini saxlamaq
-        function saveProgress() {
-            localStorage.setItem('ktn-progress', JSON.stringify(progress));
-        }
-
-        // UI-ni yeniləmək
-        function updateUI() {
-            // Statistikaları yeniləmək
-            const completedCount = progress.completed.length;
+        // Status mesajını yeniləmək
+        function updateStatusMessage(availableCount) {
+            const statusMessage = document.getElementById('statusMessage');
             const totalCount = lessons.length;
-            const progressPercent = Math.round((completedCount / totalCount) * 100);
-
-            document.getElementById('completedLessons').textContent = completedCount;
-            document.getElementById('currentProgress').textContent = progressPercent + '%';
-            document.getElementById('progressText').textContent = `${completedCount}/${totalCount} dərs tamamlandı`;
-            document.getElementById('progressFill').style.width = progressPercent + '%';
-            document.getElementById('progressPercent').textContent = progressPercent + '%';
-
-            // Dərslər siyahısını yeniləmək
-            createLessonsList();
+            
+            setTimeout(() => {
+                if (availableCount === 0) {
+                    statusMessage.className = 'status-message status-error';
+                    statusMessage.innerHTML = `
+                        <p>❌ <strong>Dərslər tapılmadı</strong></p>
+                        <p>GitHub repository-sində Klassik Test Nəzəriyyəsi dərsləri mövcud deyil.</p>
+                        <p><strong>Yoxlayın:</strong> Faylların "Ders-1.html" formatında olduğundan əmin olun.</p>
+                    `;
+                } else if (availableCount === totalCount) {
+                    statusMessage.className = 'status-message status-success';
+                    statusMessage.innerHTML = `
+                        <p>✅ <strong>Mükəmməl! Bütün dərslər hazırdır</strong></p>
+                        <p>Klassik Test Nəzəriyyəsinin 20 dərsinin hamısı mövcuddur. Öyrənməyə başlayın!</p>
+                    `;
+                } else {
+                    statusMessage.className = 'status-message status-partial';
+                    statusMessage.innerHTML = `
+                        <p>⚠️ <strong>Qismən mövcuddur</strong></p>
+                        <p>${availableCount}/${totalCount} dərs tapıldı. Əksik olan ${totalCount - availableCount} dərsi tamamlayın.</p>
+                    `;
+                }
+            }, 2000);
         }
 
-        // Bildiriş göstərmək
-        function showNotification(message, type = 'info') {
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: ${type === 'success' ? '#d4edda' : '#cce7ff'};
-                color: ${type === 'success' ? '#155724' :
+        // Axtarış funksiyası
+        function searchLessons() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                createLessonsList();
+                return;
+            }
+            
+            const filteredLessons = lessons.filter(lesson => 
+                lesson.title.toLowerCase().includes(searchTerm) ||
+                lesson.description.toLowerCase().includes(searchTerm) ||
+                lesson.category.toLowerCase().includes(searchTerm) ||
+                lesson.number.toString().includes(searchTerm)
+            );
+            
+            createLessonsList(filteredLessons);
+        }
+
+        // Event listener-lər
+        document.getElementById('searchInput').addEventListener('input', searchLessons);
+
+        // Səhifə yükləndikdə
+        document.addEventListener('DOMContentLoaded', function() {
+            createLessonsList();
+        });
+
+        // Klaviatura qısayolları
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '/' && !e.ctrlKey && !e.altKey) {
+                e.preventDefault();
+                document.getElementById('searchInput').focus();
+            }
+            if (e.key === 'Escape') {
+                document.getElementById('searchInput').value = '';
+                createLessonsList();
+            }
+        });
+    </script>
+</body>
+</html>
